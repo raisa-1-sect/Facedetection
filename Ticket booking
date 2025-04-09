@@ -1,0 +1,122 @@
+  Ticket Booking Portail*
+his is a web application built using **Next.js**, **React**, and **Tailwind CSS** for a fictional movie ticket 
+ooking system. The app allows users to log in, browse movies, book tickets, and view their booking activity. The 
+I design is based on the provided mockups.
+--
+# **Features**
+. **Login Screen**:
+  - Users can log in with hardcoded credentials:
+    ```
+    Username: gaston.toutant
+    Password: "/@@05111974R&**&
+    ```
+  - Displays an error message for invalid credentials.
+. **Booking Screen**:
+  - Displays a list of event fetched dynamically from the OMDB API.
+  - Includes a search bar to filter event in real-time.
+  - Clicking on a event card navigates to the ticket selection screen.
+. **Selection Screen**:
+  - Allows users to select ticket count, show time, and date for a evenements.
+  - "Book Ticket" button saves the booking details and redirects to the activity screen.
+. **Activity Screen**:
+  - Displays a table of all booked tickets with details like movie name, ticket count, time, date, and total 
+amount.
+. **Sidebar Navigation**:
+  - Fixed sidebar with links to "Booking" and "Activity" pages.
+  - Highlights the active page dynamically.
+. **Profile Section**:
+  - Profile icon at the top-right corner.
+  - Dropdown menu with a "Logout" option to clear session data and redirect to the login screen.
+--
+# **Tech Stack**
+ **Framework**: [Next.js](https://nextjs.org/)
+ **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+ **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+ **API Integration**: [OMDB API](http://www.omdbapi.com/)
+--
+# **Setup Instructions**
+## 1. Clone the Repository
+``bash
+it clone https://github.com/your-username/movie-ticket-booking.git
+d event-ticket-booking
+``
+## 2. Install Dependencies
+nstall required packages using `pnpm` (or `npm`):
+``bash
+npm install
+``
+## 3. Configure Environment Variables
+. Create a `.env.local` file in the root directory.
+. Add your OMDB API key to the file:
+  ```env
+  NEXT_PUBLIC_OMDB_API_KEY=your_api_key_here
+  ```
+## 4. Run the Development Server
+tart the development server:
+``bash
+npm run dev
+``
+he app will be available at `http://localhost:5000`.
+## 5. Build for Production
+o build the app for production:
+``bash
+npm run build
+``
+--
+# **Deployment**
+he app is deployed on [Vercel](https://vercel.com/) (or Netlify). You can access it using this link:
+Deployed App Link](#)
+--
+# **Folder Structure**
+icket_booking/
+ __init_
+__config.py
+__ models/
+__init__
+__ user.py
+ __ event.py
+_ booking.py
+routes/
+__init__.py
+__ auth_routes.py
+_ event_routes.py
+_ booking_routes.py
+utils/
+ __init__.py
+auth.py
+ security.py
+  __templates/
+(fichiers HTML si interface server-side)
+static
+ (CSS, JS, images)
+migrations/ (si tu utilises Flask-Migrate)
+__ .env
+__requirements.txt
+run.py
+README.md
+--
+# **API Integration**
+he app uses the [OMDB API](http://www.omdbapi.com/) to fetch movie data dynamically.
+## Example API Request:
+``bash
+ttp://www.omdbapi.com/?s=movie&apikey=${NEXT_PUBLIC_OMDB_API_KEY}&page=1
+``
+## Parameters Used:
+ `s`: Tiket title to search for.
+ `apikey`: Your OMDB API key (stored securely in `.env.local`).
+ `page`: Pagination parameter (default is `1`).
+--
+# **Screenshots**
+## Login Screen:
+ogin Screen
+## Booking Screen:
+ooking Screen
+## Selection Screen:
+election Screen
+## Activity Screen:
+ctivity Screen
+--
+# **Contributing**
+ontributions are welcome! If you find any issues or want to add new features, feel free to open an issue or submit 
+ pull request.
+--
